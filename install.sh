@@ -10,17 +10,17 @@
 
 # ------ copying Music Directory to Home Directory in the Music folder ------ #
 
-homeDir = "~/Music"
+scrDir=$(pwd)
 
 # Check if the directory exists #
-if [ ! -d "$homeDir" ];
+if [ ! -d "~/Music" ];
 then
     # Create a new one if it doesn't exist #
-    mkdir -p "$homeDir";
+    mkdir -p ~/Music;
 fi
 
 # copying files to Music folder in Home Directory #
-cp -rf /Music/* ~/"$homeDir"
+mv -i "$scrDir"/Music/* ~/Music
 
 # ------ copying Music Directory to Home Directory in the Music folder ------ #
 
@@ -28,5 +28,6 @@ cp -rf /Music/* ~/"$homeDir"
                     #  ------   Final Step   ------  #
 
 # ------ remove unneeded files ------ #
-cd .. && rm -rf exodia-music
+cd "$scrDir" && cd ..
+rm -rf exodia-music
 # ------ remove unneeded files ------ #
