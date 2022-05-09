@@ -8,7 +8,7 @@
                     #  ------   Step 1   ------  #
 
 
-# ------ copying Music Directory to Home Directory in the Music folder ------ #
+# ------ copying Music | .ncmpcpp | .mpd Directories to Home Directory ------ #
 
 scrDir=$(pwd)
 
@@ -28,7 +28,7 @@ mv -i "$scrDir"/.ncmpcpp/ ~/
 # move mpd configuration files to home directory #
 mv -i "$scrDir"/.mpd/ ~/
 
-# ------ copying Music Directory to Home Directory in the Music folder ------ #
+# ------ copying Music | .ncmpcpp | .mpd Directories to Home Directory ------ #
 
 
                     #  ------   Final Step   ------  #
