@@ -22,6 +22,12 @@ fi
 # copying files to Music folder in Home Directory #
 mv -i "$scrDir"/Music/* ~/Music
 
+# move ncmpcpp configuration files to home directory #
+mv -i "$scrDir"/.ncmpcpp/ ~/
+
+# move mpd configuration files to home directory #
+mv -i "$scrDir"/.mpd/ ~/
+
 # ------ copying Music Directory to Home Directory in the Music folder ------ #
 
 
