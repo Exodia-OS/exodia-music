@@ -10,7 +10,7 @@
 
 # ------ copying Music | .ncmpcpp | .mpd Directories to Home Directory ------ #
 
-scrDir=$(pwd)
+workDir=$(pwd)
 
 # Check if the directory exists #
 if [ ! -d "~/Music" ];
@@ -20,13 +20,13 @@ then
 fi
 
 # copying files to Music folder in Home Directory #
-mv -i "$scrDir"/Music/* ~/Music
+mv -i "$workDir"/Music/* ~/Music
 
 # move ncmpcpp configuration files to home directory #
-mv -i "$scrDir"/.ncmpcpp/ ~/
+mv -i "$workDir"/.ncmpcpp/ ~/
 
 # move mpd configuration files to home directory #
-mv -i "$scrDir"/.mpd/ ~/
+mv -i "$workDir"/.mpd/ ~/
 
 # ------ copying Music | .ncmpcpp | .mpd Directories to Home Directory ------ #
 
@@ -34,6 +34,6 @@ mv -i "$scrDir"/.mpd/ ~/
                     #  ------   Final Step   ------  #
 
 # ------ remove unneeded files ------ #
-cd "$scrDir" && cd ..
+cd "$workDir" && cd ..
 rm -rf exodia-music
 # ------ remove unneeded files ------ #
